@@ -2,5 +2,14 @@
 //Ex: militaryTime('7:47pm') returns '19:47'
 
 function militaryTime(timeStr) {
-  //write code here
+  //check for AM or PM
+    //if PM +12 to hrs
+  //else if single digit
+    //add 0 to hours
+  //remove the colon from string
+  //remove AM/PM
+  //return new time
+  
 }
+
+
