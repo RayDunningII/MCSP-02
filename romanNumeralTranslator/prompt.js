@@ -27,5 +27,32 @@ var DIGIT_VALUES = {
 };
 
 var translateRomanNumeral = function(romanNumeral) {
-  // TODO: Implement me!
+  //create a result variable
+  //Split the input at each character 
+  //itterate through the input
+  //put the current letter and next letter into variables
+  //if the current letter is undefined - return null
+  //else if current letter is less than next add current letter minus next letter to result variable
+  //double increment to skip next letter
+  //else add current letter to result 
+  //return result
+  let result = 0;
+  let input = romanNumeral.split('');
+
+  for(let i = 0; i < input.length; i++){
+     let currentLetter = DIGIT_VALUES[i];
+     let nextLetter = DIGIT_VALUES[i + 1];
+     if (currentLetter = undefined){
+       return null;
+     } else {
+      if (currentLetter < nextLetter) {
+        result +=  nextLetter - currentLetter;
+        i++;
+      } else {
+        result += currentLetter;
+      }
+     }
+  }
+  return result;
+
 };
